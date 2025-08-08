@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website for Dhruv - Professional Video Editor & Social Media Manager">
+  <title>Dhruv | Video Editor & Social Media Manager</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff4d4d;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      scroll-snap-align: start;
+    }
+    .slides {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+    }
+    .hero {
+      background: linear-gradient(to right, #ff4d4d, #1a1a1a);
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .service-card {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card h3 {
+      color: #ff4d4d;
+      margin-bottom: 0.5rem;
+    }
+    .work-gallery {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding: 1rem;
+    }
+    .work-gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .work-gallery img:hover {
+      transform: scale(1.05);
+    }
+    .btn {
+      padding: 0.7rem 1.5rem;
+      background: #ff4d4d;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #e03a3a;
+    }
+    footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dhruv</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="slides">
+    <section class="hero" id="home">
+      <h2>Professional Video Editor & Social Media Manager</h2>
+      <p>4+ years of experience in video editing | 2+ years in Instagram growth strategies</p>
+      <a href="#contact" class="btn">Work With Me</a>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service-card"><h3>Colour Grading</h3><p>Cinematic tones & balanced visuals.</p></div>
+        <div class="service-card"><h3>Reel Edits</h3><p>Engaging short-form content.</p></div>
+        <div class="service-card"><h3>Podcast Editing</h3><p>Professional audio & video edits.</p></div>
+        <div class="service-card"><h3>Long-Form Editing</h3><p>YouTube & storytelling content.</p></div>
+        <div class="service-card"><h3>Effects Editing</h3><p>Advanced visual effects.</p></div>
+        <div class="service-card"><h3>Social Media Management</h3><p>Instagram growth strategies.</p></div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>My Work</h2>
+      <div class="work-gallery">
+        <img src="sample1.jpg" alt="Work sample 1">
+        <img src="sample2.jpg" alt="Work sample 2">
+        <img src="sample3.jpg" alt="Work sample 3">
+        <img src="sample4.jpg" alt="Work sample 4">
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p style="max-width:800px; text-align:center;">
+        Hi, I'm Dhruv, a passionate video editor with expertise in Adobe After Effects and Premiere Pro.
+        I’ve been editing for over 4 years and mastering Instagram’s algorithm for 2-3 years to help brands grow.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:dhruv@example.com" style="color:#ff4d4d;">dhruv@example.com</a></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Dhruv | Video Editor & Social Media Manager</p>
+    </footer>
+  </div>
+</body>
+</html>
